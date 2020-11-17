@@ -1,7 +1,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include "stringset_lab2.h"
+#include "stringset.h"
 
 using namespace std;
 
