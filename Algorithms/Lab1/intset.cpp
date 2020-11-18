@@ -1,5 +1,5 @@
 /* Benjamin Ferkol
- * CPSC 3220
+ * Algorithms: linked list work
 */
 
 #include <iostream>
