@@ -1,3 +1,7 @@
+/* Benjamin Ferkol
+ * Algorithms
+*/
+
 #ifndef INTSET_H /* Prevent multiple inclusion... */
 #define INTSET_H
 
