@@ -19,7 +19,7 @@ Intset::~Intset()
     while (head != NULL) remove(head->key);
 }
 
-/* Return true if key is in the set */
+// Return true if key is in the set
 bool Intset::find(int key)
 {
     for (Node *n = head; n != NULL; n = n->next)
@@ -27,7 +27,7 @@ bool Intset::find(int key)
     return false;
 }
 
-/* Inserts a new key.  It is an error if key is already in the set. */
+// Inserts a new key, it is an error if key is already in the set
 void Intset::insert(int key)
 {
     assert (!find(key));
@@ -39,7 +39,7 @@ void Intset::insert(int key)
         swap(n->key, n->next->key);
 }
 
-/* Removes a key.  It is an error if key isn't in the set */
+// Removes a key.  It is an error if key isn't in the set
 void Intset::remove(int key)
 {
     assert (find(key));
@@ -50,8 +50,7 @@ void Intset::remove(int key)
         head = head->next;
         delete to_delete;
     } else {
-        // Walk down list and stop one node before the one to
-        // delete
+        // Walk down list and stop one node before the one to delete
         Node *n = head;
         while (n->next->key != key) n = n->next;
         Node *to_delete = n->next;
@@ -60,6 +59,7 @@ void Intset::remove(int key)
     }
 }
 
+// Prints out the list
 void Intset::print(void)
 {
     for (Node *n = head; n != NULL; n = n->next)
